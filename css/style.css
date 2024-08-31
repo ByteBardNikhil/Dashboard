@@ -427,6 +427,16 @@ footer:last-child {
 }
 
 @media screen and (max-width: 540px) {
+  .header {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .header h1 {
+    margin: auto 0;
+    margin: 1rem;
+  }
+
   .left {
     flex-direction: row;
     justify-content: space-between;
@@ -455,5 +465,14 @@ footer:last-child {
   .card {
     width: 50%;
     height: 100%;
+  }
+  .contact-inner {
+    margin: auto 0px;
+  }
+  table {
+    border: 1px solid #ccc;
+  }
+  .card {
+    width: 65%;
   }
 }
