@@ -2,11 +2,7 @@
   font-family: "Sevillana", cursive;
   src: url("https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Sevillana&display=swap");
 }
-* {
-  font-weight: 500;
-  font-style: normal;
-  max-width: 100%;
-}
+
 body {
   font-family: "Short Stack", cursive;
   background-color: #f5f5f5;
@@ -15,13 +11,12 @@ main {
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: 20px;
-  padding: 20px;
+  justify-content: center;
 }
 .left {
   background-color: black;
   height: 90vh;
   border-radius: 30px;
-
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -42,6 +37,7 @@ main {
   height: 100%;
 }
 .profile img {
+  width: 100%;
   border-radius: 50%;
 }
 .profile p {
@@ -81,18 +77,22 @@ main {
 .right {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
 .header > h1 {
-  margin-left: 3rem;
+  margin-left: 4rem;
   margin-top: 2rem;
-  font-size: 4vw;
+
+  font-size: 3vw;
   font-weight: 700px;
 }
 .header > input {
@@ -101,10 +101,12 @@ main {
   height: 2rem;
   margin-top: 0;
   border-radius: 2rem;
+  padding: 0.5rem;
 
   border: 0px solid white;
   background-color: white;
 }
+
 input:focus {
   outline: 2px solid green;
 }
@@ -115,8 +117,9 @@ input:focus {
   width: 85%;
   border-radius: 25px;
   background-color: white;
-  margin-left: 50px;
-  padding: 10px;
+  margin-left: 2rem;
+  padding: 2rem;
+  margin: auto 0px;
 }
 #board img {
   width: 100%;
@@ -124,7 +127,9 @@ input:focus {
   object-fit: cover;
 }
 /* Dash board data css started */
-
+#data {
+  width: 100%;
+}
 #data > h2 {
   text-align: center;
   text-decoration: underline;
@@ -136,6 +141,7 @@ input:focus {
   font-size: 200%;
   text-decoration: underline rgb(150, 137, 64);
   transition: font-size 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  font-weight: 400;
 }
 .card-container {
   display: flex;
@@ -183,14 +189,15 @@ input:focus {
 }
 
 /* User Table css Starts  */
+
 #users h2 {
   text-align: center;
   text-decoration: underline;
   font-weight: bolder;
 }
 #users {
-  margin-top: 50px;
-  margin-left: 70px;
+  margin: auto 0px;
+  width: 100%;
 }
 
 #users table {
@@ -198,11 +205,12 @@ input:focus {
   border-collapse: collapse;
   border-radius: 20px;
   background-color: white;
+  overflow-x: auto;
 }
 table th,
 table td {
-  padding: 15px 100px;
-  text-align: left;
+  padding: 2% 5%;
+  text-align: center;
 }
 table th {
   background-color: #a39696;
@@ -217,6 +225,7 @@ table tbody tr:hover {
 
 /* schedule css start  */
 #schedule {
+  width: 100%;
   background-color: white;
   border-radius: 30px;
   height: 450px;
@@ -224,6 +233,7 @@ table tbody tr:hover {
   overflow-y: scroll;
   max-height: 400px;
   margin-left: 70px;
+  margin: auto 0;
 }
 .schedule-head {
   display: flex;
@@ -281,8 +291,9 @@ table tbody tr:hover {
 .contact-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 2rem;
   margin: 20px 0px 20px 20px;
+  justify-content: space-between;
 }
 #contact h2 {
   text-align: center;
@@ -293,8 +304,10 @@ table tbody tr:hover {
   margin-bottom: 20px;
 }
 iframe {
+  /* align-self: auto; */
   border-radius: 30px;
 }
+
 .feedback-form {
   background-color: white;
   border-radius: 30px;
@@ -360,6 +373,14 @@ footer:last-child {
 @media screen and (max-width: 780px) {
   .header > input {
     width: 200px;
+    margin: auto 0px;
+    height: 1rem;
+  }
+  .header > h1 {
+    /* margin-left: 3rem;
+  margin-top: 2rem; */
+    font-size: 4vw;
+    font-weight: 700px;
   }
   main {
     display: block;
@@ -369,8 +390,8 @@ footer:last-child {
     height: auto;
   }
   .profile-img {
-    width: 92px;
-    height: 92px;
+    width: 72px;
+    height: 82px;
     position: absolute;
     top: 0.2rem;
   }
@@ -411,8 +432,8 @@ footer:last-child {
     justify-content: space-between;
   }
   .profile-img {
-    width: 82px;
-    height: 82px;
+    width: 62px;
+    height: 72px;
   }
 
   .profile p {
