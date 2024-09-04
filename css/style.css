@@ -2,6 +2,30 @@
   font-family: "Sevillana", cursive;
   src: url("https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Sevillana&display=swap");
 }
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: #000;
+  animation: line-run 2s linear infinite;
+  opacity: 0;
+  border-radius: 1rem;
+}
+@keyframes line-run {
+  0% {
+    width: 0;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
 
 body {
   font-family: "Short Stack", cursive;
@@ -13,6 +37,7 @@ main {
   gap: 20px;
   justify-content: center;
 }
+
 .left {
   background-color: black;
   height: 90vh;
@@ -54,7 +79,7 @@ main {
 .nav {
   display: flex;
   padding-right: 1.5rem;
-  margin: 2rem 0 2rem 1.5rem;
+  margin: 0rem 0 2rem 1.5rem;
   color: white;
 }
 
@@ -67,6 +92,7 @@ main {
   font-size: 16px;
   text-decoration: none;
   color: white;
+
   /* margin-bottom: 2rem; */
 }
 .nav > a:hover {
@@ -134,13 +160,15 @@ input:focus {
   text-align: center;
   text-decoration: underline;
   font-weight: bolder;
+  transition: all 1s ease;
 }
 
 #users > h2:hover,
 #data > h2:hover {
   font-size: 200%;
   text-decoration: underline rgb(150, 137, 64);
-  transition: font-size 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+  transform: scale(1.2);
   font-weight: 400;
 }
 .card-container {
@@ -156,9 +184,14 @@ input:focus {
   height: 100px;
   width: 180px;
   border-radius: 20px;
+  transform: scale(1);
+  transition: all 0.4s ease-in-out;
 }
 .card:hover {
-  background: radial-gradient(circle, rgb(238, 128, 128) 0%, lightblue 100%);
+  background-color: black;
+  color: white;
+  transform: scale(1.3);
+  cursor: pointer;
 }
 .card1 {
   background: lightblue;
@@ -194,6 +227,7 @@ input:focus {
   text-align: center;
   text-decoration: underline;
   font-weight: bolder;
+  transition: all 1s ease;
 }
 #users {
   margin: auto 0px;
@@ -312,6 +346,12 @@ iframe {
   background-color: white;
   border-radius: 30px;
   padding: 20px;
+  transition: all 0.5s ease;
+}
+.feedback-form:focus {
+  background-color: black;
+  color: white;
+  border: 2px solid #ccc;
 }
 .feedback-form h2 {
   margin: 0px 20px;
@@ -349,6 +389,12 @@ footer {
   padding: 20px 0px;
   text-align: center;
   border-radius: 20px;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+footer:hover {
+  background-color: black;
+  color: white;
 }
 footer div {
   margin-bottom: 10px;
@@ -432,6 +478,11 @@ footer:last-child {
     display: block;
     text-align: center;
   }
+  @keyframes line-run {
+    0% {
+    }
+  }
+
   .header h1 {
     margin: auto 0;
     margin: 1rem;
