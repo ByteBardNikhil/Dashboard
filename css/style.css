@@ -2,6 +2,7 @@
   font-family: "Sevillana", cursive;
   src: url("https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Sevillana&display=swap");
 }
+
 .line {
   position: absolute;
   bottom: 0;
@@ -34,18 +35,18 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  gap: 20px;
+  gap: 1.3rem;
   justify-content: center;
 }
 
 .left {
   background-color: black;
   height: 90vh;
-  border-radius: 30px;
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
   position: sticky;
-  top: 20px;
+  top: 1.3rem;
 
   align-items: center;
 }
@@ -54,7 +55,8 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 0px;
-  margin: 10px;
+  margin: 1rem;
+  margin-bottom: 3rem;
 }
 
 .profile-img {
@@ -76,27 +78,32 @@ main {
 .setting a i {
   display: none;
 }
+
 .nav {
   display: flex;
   padding-right: 1.5rem;
   margin: 0rem 0 2rem 1.5rem;
   color: white;
+  transition: all 0.2s ease;
 }
 
 .nav:hover {
   color: gold;
+  transform: scale(1.2);
 }
 .nav > a {
   padding-left: 1.5rem;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   color: white;
 
   /* margin-bottom: 2rem; */
 }
+
 .nav > a:hover {
   color: lightgray;
+  transform: scale(1.2);
 }
 
 /* Right section starts */
@@ -105,7 +112,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.2rem;
 }
 .header {
   width: 100%;
@@ -141,7 +148,7 @@ input:focus {
 
 #board {
   width: 85%;
-  border-radius: 25px;
+  border-radius: 2rem;
   background-color: white;
   margin-left: 2rem;
   padding: 2rem;
@@ -174,7 +181,7 @@ input:focus {
 .card-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.3rem;
   flex-wrap: wrap;
   font-family: "Sevillana", cursive;
   font-weight: bolder;
@@ -183,7 +190,7 @@ input:focus {
 .card {
   height: 100px;
   width: 180px;
-  border-radius: 20px;
+  border-radius: 1.5rem;
   transform: scale(1);
   transition: all 0.4s ease-in-out;
 }
@@ -207,17 +214,17 @@ input:focus {
   background-color: rgb(192, 186, 186);
 }
 .card > i {
-  margin-left: 150px;
-  margin-top: 20px;
+  margin-left: 9rem;
+  margin-top: 1.4rem;
 }
 .card-head {
   margin: 0px;
-  margin-left: 10px;
-  font-size: 18px;
+  margin-left: 0.8rem;
+  font-size: 1.2rem;
 }
 .card-data {
   margin-top: 4px;
-  font-size: 16px;
+  font-size: 1rem;
   margin-left: 10px;
 }
 
@@ -376,10 +383,14 @@ iframe {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #9bdd7c;
+  background-color: #5fa83d;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+.feedback-form input[type="submit"]:hover {
+  transform: scale(1.1);
 }
 
 footer {
