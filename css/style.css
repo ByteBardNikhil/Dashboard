@@ -133,8 +133,12 @@ main {
   width: 20vw;
   height: 2rem;
   margin-top: 0;
+
   border-radius: 2rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 
   border: 0px solid white;
   background-color: white;
@@ -153,6 +157,9 @@ input:focus {
   margin-left: 2rem;
   padding: 2rem;
   margin: auto 0px;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 #board img {
   width: 100%;
@@ -193,6 +200,9 @@ input:focus {
   border-radius: 1.5rem;
   transform: scale(1);
   transition: all 0.4s ease-in-out;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 .card:hover {
   background-color: black;
@@ -242,23 +252,30 @@ input:focus {
 }
 
 #users table {
-  width: 95%;
-  border-collapse: collapse;
-  border-radius: 20px;
-  background-color: white;
-  overflow-x: auto;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
 table th,
 table td {
-  padding: 2% 5%;
+  padding: 1rem;
   text-align: center;
 }
 table th {
-  background-color: #a39696;
+  border-radius: 1rem;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+
+  background-color: #bdbdbd;
   font-weight: 600;
 }
 table tbody tr:nth-child(even) {
-  background-color: #d0cbcb;
+  background-color: #f0f0f0;
 }
 table tbody tr:hover {
   background-color: #eaeaea;
@@ -497,11 +514,13 @@ footer:last-child {
   .header h1 {
     margin: auto 0;
     margin: 1rem;
+    font-size: 2rem;
   }
 
   .left {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
   .profile-img {
     width: 62px;
@@ -525,16 +544,24 @@ footer:last-child {
     justify-content: center;
   }
   .card {
-    width: 50%;
+    width: 80%;
     height: 100%;
+    text-align: center;
+  }
+  .card i {
+    margin-left: 0px;
+    margin-bottom: 1rem;
   }
   .contact-inner {
     margin: auto 0px;
   }
-  table {
-    border: 1px solid #ccc;
+  #users {
+    margin: 0px;
   }
-  .card {
-    width: 65%;
+  table {
+    /* border: 1px solid #ccc; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
   }
 }
