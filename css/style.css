@@ -3,17 +3,15 @@
   src: url("https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Sevillana&display=swap");
 }
 
-.line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0.2rem;
-  background-color: #000;
+.header h1::after {
+  content: "";
+  display: block;
+  height: 2px;
+
+  background-color: black;
   animation: line-run 2s linear infinite;
-  opacity: 0;
-  border-radius: 1rem;
 }
+
 @keyframes line-run {
   0% {
     width: 0;
@@ -172,7 +170,7 @@ input:focus {
 }
 #data > h2 {
   text-align: center;
-  text-decoration: underline;
+
   font-weight: bolder;
   transition: all 1s ease;
 }
@@ -195,8 +193,8 @@ input:focus {
   padding: 3%;
 }
 .card {
-  height: 100px;
-  width: 180px;
+  height: 8rem;
+  width: 12rem;
   border-radius: 1.5rem;
   transform: scale(1);
   transition: all 0.4s ease-in-out;
@@ -235,7 +233,7 @@ input:focus {
 .card-data {
   margin-top: 4px;
   font-size: 1rem;
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 
 /* User Table css Starts  */
@@ -265,6 +263,7 @@ table td {
   padding: 1rem;
   text-align: center;
 }
+
 table th {
   border-radius: 1rem;
   box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
@@ -292,6 +291,9 @@ table tbody tr:hover {
   max-height: 400px;
   margin-left: 70px;
   margin: auto 0;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 .schedule-head {
   display: flex;
@@ -364,6 +366,14 @@ table tbody tr:hover {
 iframe {
   /* align-self: auto; */
   border-radius: 30px;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+.contact-inner div {
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 
 .feedback-form {
@@ -371,6 +381,9 @@ iframe {
   border-radius: 30px;
   padding: 20px;
   transition: all 0.5s ease;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 .feedback-form:focus {
   background-color: black;
@@ -412,13 +425,16 @@ iframe {
 
 footer {
   width: 100%;
-  background-color: #635656;
+  background-color: black;
   color: white;
   padding: 20px 0px;
   text-align: center;
   border-radius: 20px;
   transform: scale(1);
   transition: all 0.5s ease-out;
+  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
+    inset -0.2rem 0px 0.4rem rgba(199, 182, 182, 0.1),
+    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 footer:hover {
   background-color: black;
@@ -444,6 +460,7 @@ footer a:last-child {
 footer:last-child {
   text-transform: uppercase;
 }
+
 @media screen and (max-width: 780px) {
   .header > input {
     width: 200px;
@@ -506,11 +523,9 @@ footer:last-child {
     display: block;
     text-align: center;
   }
-  @keyframes line-run {
-    0% {
-    }
+  .header h1::after {
+    display: none;
   }
-
   .header h1 {
     margin: auto 0;
     margin: 1rem;
