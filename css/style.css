@@ -366,9 +366,6 @@ table tbody tr:hover {
 iframe {
   /* align-self: auto; */
   border-radius: 30px;
-  box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
-    inset -0.2rem 0px 0.4rem rgba(0, 0, 0, 0.1),
-    0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 .contact-inner div {
   box-shadow: inset 0px 0.2rem 0.4rem rgba(0, 0, 0, 0.1),
@@ -536,15 +533,17 @@ footer:last-child {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 15vh;
   }
   .profile-img {
     width: 62px;
-    height: 72px;
+    height: 52px;
+    border-radius: 0.1rem;
   }
 
   .profile p {
     margin-left: 1rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
   }
   .nav {
     display: none;
